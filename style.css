@@ -24,12 +24,10 @@
             };
       }
 
-<!--
-      img[src]{
+      img[src="drawing.png"]{
             border: 5px solid brown;
             align: center;
 }
--->
 
       #logo {
             animation-name: logo-animation;
