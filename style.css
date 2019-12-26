@@ -28,4 +28,18 @@
             border: 5px solid brown;
             align: center;
 }
+
+      #logo {
+            animation-name: logo-animation;
+            animation-duration: 10s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+}
+      @keyframes logo-animation {
+            from {transform: rotate (0deg);}
+            to {transform: rotate (360deg);}
+}
+            
+            
 </style>
