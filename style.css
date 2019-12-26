@@ -13,13 +13,14 @@
         color: red;
         background: light blue;
       }
-      a:hover a:active a:focus {
-        background: rgb(255,214,255);
-      }
+      
       div {
         font-family: sans-serif;
         color: red;
         background: yellow;
         width: 75%;
+        a:hover a:active a:focus {
+        background: rgb(255,214,255);
+            }
       }
 </style>
