@@ -13,10 +13,13 @@
       price = selName.value;
       total = qty * price;
       
+      console.log("here 1");
       if total > 500 {
         document.write("Option * Quantity > 500");
+        console.log("here 2");
       }else{
         document.write("Option * Quanitty not > 500");
+        console.log("here 3");
       }
       
       imgName = selName.options[selName.selectedIndex].text + ".jpg";
