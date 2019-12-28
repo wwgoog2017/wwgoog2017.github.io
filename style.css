@@ -28,7 +28,10 @@
             border: 5px solid brown;
             align: center;
 }
-
+      imag[src="logoCone.png"]{
+            border: 2px solid brown;
+            align: center;
+}
       #logo {
             animation-name: logo-animation;
             animation-duration: 10s;
