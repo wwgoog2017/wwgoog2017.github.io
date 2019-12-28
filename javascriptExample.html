@@ -5,7 +5,7 @@
   <title>cool javascript example</title>
   <script>
     function fnOrder() {
-      var selName, txtQty, divShow, qty, prie, total, imgName;
+      var selName, txtQty, divShow, qty, prie, total, imgName, msg;
       selName = document.getElementById ("selName");
       txtQty = document.getElementById ("txtQty");
       divShow = document.getElementById ("divShow");
@@ -13,18 +13,15 @@
       price = selName.value;
       total = qty * price;
       
-      console.log("here 1");
-      if (total > 500) {
-        document.write("Option * Quantity > 500");
-        console.log("here 2");
-      }else{
-        document.write("Option * Quanitty not > 500");
-        console.log("here 3");
-      }
-      
       imgName = selName.options[selName.selectedIndex].text + ".jpg";
+      if (total >500){
+        msg = "Option * Quantity > 500);
+      } else {
+        msg = "Option * Quantity not > 500);
+      }
       divShow.innerHTML = "<p>Unit price: " + price + "</p>" + 
         "<p>Sub-total: " + total + "</p>" +
+        msg + "<br/>" +
         "<img src='images/" + imgName + "' width='200'>'";
       }
    </script>
