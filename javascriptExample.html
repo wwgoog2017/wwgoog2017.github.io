@@ -12,6 +12,13 @@
       qty = txtQty.value;
       price = selName.value;
       total = qty * price;
+      
+      if total > 500 {
+        document.write("Option * Quantity > 500");
+      }else{
+        document.write("Option * Quanitty not > 500");
+      }
+      
       imgName = selName.options[selName.selectedIndex].text + ".jpg";
       divShow.innerHTML = "<p>Unit price: " + price + "</p>" + 
         "<p>Sub-total: " + total + "</p>" +
