@@ -1,7 +1,7 @@
 
 $("#logo").animate({
-  height:"+=300px",
-  width: "+=300px"
+  height:"+=210px",
+  width: "+=210px"
   },1500);        // increase in 1.5 second
 
 $("#logo").animate({
