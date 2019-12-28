@@ -6,5 +6,5 @@ $("#logo").animate({
 
 $("#logo").animate({
   height: "-=300px",
-  width: "-+300px"
+  width: "-=300px"
 },1500);
