@@ -32,6 +32,7 @@
             border: 2px solid brown;
             align: center;
 }
+<!-- logo animation does not work on github server
       #logo {
             animation-name: logo-animation;
             animation-duration: 10s;
@@ -43,6 +44,6 @@
             from {transform: rotate (0deg);}
             to {transform: rotate (360deg);}
 }
-            
+-->
             
 </style>
