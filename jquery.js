@@ -1,5 +1,5 @@
 
-
+function fnLogo(){
   $("#logo").animate({
     height:"+=180px",
     width: "+=180px"
@@ -9,4 +9,5 @@
     height: "-=150px",
     width: "-=150px"
   },1500);
-
+}
+fnLogo();
