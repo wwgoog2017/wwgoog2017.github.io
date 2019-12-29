@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #div-show {
+            width: 100%;
+            height: 70%;
+            background-color: black;
+            text-align: center;
+        }
+
+            #div-show img {
+                height: 100%;
+            }
+
+        #div-cont {
+            position: relative;
+            width: 100%;
+            height: 30%;
+            overflow: hidden;
+        }
+
+        #btnPrev {
+            width: 30px;
+            height: 30px;
+            background-image: url("images/icon/prev.png");
+            background-size: cover;
+            position: absolute;
+            top: 40%;
+            left: 5px;
+        }
+
+        #btnNext {
+            width: 30px;
+            height: 30px;
+            background-image: url("images/icon/next.png");
+            background-size: cover;
+            position: absolute;
+            top: 40%;
+            right: 5px;
+        }
+
+        #div-cont {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: black;
+            left: 0%;
+            transition: 1.5s;
+        }
+
+        #div-select div {
+            height: 85%;
+            width: 240px;
+            float: left;
+            margin-left: 14px;
+            margin-top: 10px;
+        }
+
+        #div-select img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        var select = 0;
+        var sel_val = 0;
+        $(document).ready(function () {
+            $("#div-select").empty();
+            for (var i = 1; i <= 13; i++) {
+                $("#div-select").append(
+                    "<div id='div" + i + "'><img src='images/pic_" + i + ".png'></div>");
+                $("#div" + i).on("click", { num: i }, fnChange);
+            }
+            iconShow();
+            $("#btnPrev").on("click", fnPrev);
+            $("#btnNext").on("click", fnNext);
+        })
+        function fnChange(event) {
+            var filename = "images/pic_" + event.data.num + ".png";
+            $("#show").attr("src", filename);
+            $("#show").hide().fadeIn(1000);
+        }
+        function iconShow() {
+            if (select < 1) {
+                $("#btnPrev").attr("style", "display: none;");
+            } else if (select > 1) {
+                $("#btnNext").attr("style", "display:none;");
+            } else {
+                $("#btnPrev").removeAttr("style");
+                $("#btnNext").removeAttr("style");
+            }
+        }
+        function fnPrev() {
+            if (select != 0) {
+                select -= 1;
+                sel_val += 100;
+                $("#div-select").css("left", sel_val + "%");
+            }
+            iconShow();
+        }
+        function fnNext() {
+            select += 1;
+            sel_val -= 100;
+            $("#div-select").css("left", sel_val + "%");
+            iconShow();
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <div id="div-show">
+        <img id="show" src="drawing1.png" />
+    </div>
+    <div id="div-cont">
+        <div id="div-select"></div>
+        <div id="btnPrev"></div>
+        <div id="btnNext"></div>
+    </div>
+
+</body>
+
+</html>
