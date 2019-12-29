@@ -1,5 +1,5 @@
 
-while (true) {
+
   $("#logo").animate({
     height:"+=180px",
     width: "+=180px"
@@ -9,4 +9,4 @@ while (true) {
     height: "-=150px",
     width: "-=150px"
   },1500);
-}
+
