@@ -10,4 +10,4 @@ function fnLogo(){
     width: "-=150px"
   },1500);
 }
-fnLogo();
+
