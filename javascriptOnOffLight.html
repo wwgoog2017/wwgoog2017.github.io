@@ -2,6 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, intial-scale=1.0"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
   <title></title>
   <style>
     .btn {
@@ -11,16 +14,7 @@
       padding: 10px 20 px;
     }
   </style>
-  
-  
-</head>
 
-<body>
-  <input type="button" value="Lights off" class = "btn" onclick="fnOff();">
-  <input type="button" value="Lights on" class = "btn" onclick="fnOn();">
-</body>
-
-  
   <script>
     function fnOff() {
       $(".btn").css("border-color","white");
@@ -35,5 +29,15 @@
       $(".body").css("background-color","white");
     }
   </script>
+  
+</head>
+
+<body>
+  <input type="button" value="Lights off" class = "btn" onclick="fnOff();">
+  <input type="button" value="Lights on" class = "btn" onclick="fnOn();">
+</body>
+
+  
+
   
 </html>
